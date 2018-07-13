@@ -1,0 +1,11 @@
+version: '3'
+services:
+  android_build:
+    build: ./
+    image: android-build
+    volumes:
+      - ~/code/dubo/android:/root/android
+      - ~/.ccache:/tmp/ccache
+    environment:
+      # USER must be set for building android
+      USER: 'root'
