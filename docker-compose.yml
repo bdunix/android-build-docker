@@ -7,5 +7,9 @@ services:
       - ~/code/dubo/android:/root/android
       - ~/.ccache:/tmp/ccache
     environment:
+      # Set up ccache
+      USE_CCACHE: '1'
+      CCACHE_DIR: '/tmp/ccache'
       # USER must be set for building android
       USER: 'root'
+    working_dir: /root/android
